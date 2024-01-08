@@ -4,14 +4,15 @@ plugins {
 
 android {
     namespace 'vip.cdms.minechat'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "vip.cdms.minechat"
         minSdk 27
-        targetSdk 33
-        versionCode 1
-        versionName "1.0"
+        targetSdk 34
+
+        versionCode 4
+        versionName "0.2.1-dev"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -23,21 +24,44 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     buildFeatures {
         viewBinding true
     }
+
+    packagingOptions {
+        exclude 'META-INF/INDEX.LIST'
+        exclude 'META-INF/io.netty.versions.properties'
+//        exclude '**/*.so'
+        exclude 'lib/**'
+    }
 }
 
 dependencies {
-
+    implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.preference:preference:1.2.0'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'androidx.core:core-splashscreen:1.0.0'
+
+    def room_version = "2.5.1"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-rxjava3:$room_version"
+
+    implementation "com.squareup.okhttp3:okhttp:$rootProject.ext.dependenciesVersion.okHttp"
+    implementation "com.github.bumptech.glide:glide:$rootProject.ext.dependenciesVersion.glide"
+    implementation "com.google.code.gson:gson:$rootProject.ext.dependenciesVersion.gson"
+
     implementation 'androidx.navigation:navigation-fragment:2.5.3'
     implementation 'androidx.navigation:navigation-ui:2.5.3'
+
+    implementation project(path: ':mc-oreui')
+    implementation project(path: ':protocol')
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'

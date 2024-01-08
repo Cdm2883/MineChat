@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/appbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+<!--    android:layout_height="60dp"-->
+<!--    android:paddingLeft="4dp"-->
+<!--    android:paddingRight="4dp"-->
+<!--    android:paddingTop="2dp"-->
+<!--    android:paddingBottom="2dp"-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <vip.cdms.mcoreui.view.button.IconButton
+            android:id="@+id/button_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_back"
+            android:layout_marginLeft="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="invisible"/>
+
+        <vip.cdms.mcoreui.view.show.TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#1e1e1f"
+            android:textAlignment="center"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_right"
+            app:layout_constraintStart_toEndOf="@id/button_left"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <vip.cdms.mcoreui.view.button.IconButton
+            android:id="@+id/button_right"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_back"
+            android:layout_marginRight="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="invisible"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

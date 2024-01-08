@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="16dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    tools:context=".fragment.PluginsFragment">
+
+    <vip.cdms.mcoreui.view.button.TextButtonToggleGroup
+        android:id="@+id/text_button_toggle_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mini="true"
+        app:style="gray"
+        app:layout_constraintTop_toTopOf="parent">
+        <vip.cdms.mcoreui.view.button.TextButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_plugin_protocol"/>
+        <vip.cdms.mcoreui.view.button.TextButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_plugin_extension"/>
+        <vip.cdms.mcoreui.view.button.TextButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_plugin_service"/>
+    </vip.cdms.mcoreui.view.button.TextButtonToggleGroup>
+
+    <vip.cdms.minechat.view.SlideRecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/text_button_toggle_group"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

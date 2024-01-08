@@ -1,0 +1,11 @@
+<resources>
+    <!-- Language Preference -->
+    <string-array name="language_entries">
+        <item>English</item>
+        <item>中文（简体）</item>
+    </string-array>
+    <string-array name="language_values">
+        <item>en</item>
+        <item>zh-rCN</item>
+    </string-array>
+</resources>

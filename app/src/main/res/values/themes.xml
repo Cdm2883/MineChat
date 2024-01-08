@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.MineChat" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <style name="Theme.MineChat" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#fff</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_foreground</item>
+        <item name="postSplashScreenTheme">@style/Theme.OreUI</item>
     </style>
-
-    <style name="Theme.MineChat" parent="Base.Theme.MineChat" />
+    <style name="Base.Theme.MineChat" parent="Theme.Material3.DayNight.NoActionBar">
+    </style>
 </resources>

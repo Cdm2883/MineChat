@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:drawable="@drawable/button_icon_pressed_background"/>
+<!--    <item android:state_enabled="false" android:drawable="@drawable/button_icon_enabled_background"/>-->
+    <item android:state_hovered="true" android:drawable="@drawable/button_icon_hovered_background"/>
+<!--    <item android:drawable="@drawable/empty"></item>-->
+</selector>

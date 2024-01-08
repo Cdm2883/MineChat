@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.OreUI" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+<!--    <style name="Theme.OreUI" parent="Theme.AppCompat.NoActionBar">-->
+<!--        <item name="android:textColor">#fff</item>-->
+        <item name="android:scrollbars">vertical</item>
+
+<!--        <item name="android:scrollbarSize">160dp</item>-->
+<!--        <item name="android:fadeScrollbars">false</item>-->
+<!--        <item name="android:scrollbarTrackVertical">@drawable/scrollbar_track_vertical</item>-->
+<!--        <item name="android:scrollbarThumbVertical">@drawable/scrollbar_thumb_vertical</item>-->
+<!--        <item name="android:scrollbarTrackHorizontal">@drawable/scrollbar_track_vertical</item>-->
+<!--        <item name="android:scrollbarThumbHorizontal">@drawable/scrollbar_thumb_vertical</item>-->
+    </style>
+</resources>

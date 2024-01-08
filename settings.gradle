@@ -1,17 +1,30 @@
 pluginManagement {
     repositories {
+        maven { url "https://mirrors.huaweicloud.com/repository/maven/" }
+
         google()
         mavenCentral()
         gradlePluginPortal()
+
+        maven { url "https://repo.opencollab.dev/maven-releases/" }
+        maven { url "https://repo.opencollab.dev/maven-snapshots/" }
+        maven { url 'https://jitpack.io' }
     }
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
+        maven { url "https://mirrors.huaweicloud.com/repository/maven/" }
+
         google()
         mavenCentral()
+        maven { url "https://repo.opencollab.dev/maven-releases/" }
+        maven { url "https://repo.opencollab.dev/maven-snapshots/" }
+        maven { url 'https://jitpack.io' }
     }
 }
 
 rootProject.name = "MineChat"
 include ':app'
+include ':mc-oreui'
+include ':protocol'

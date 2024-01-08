@@ -1,0 +1,57 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <vip.cdms.mcoreui.preference.PreferenceCategory app:title="@string/fragment_setting_basic_settings">
+        <vip.cdms.mcoreui.preference.SwitchPreference
+            app:key="check_for_updates_automatically"
+            app:title="@string/fragment_setting_check_for_updates_automatically_title"
+            app:summary="@string/fragment_setting_check_for_updates_automatically_summary"
+            app:defaultValue="true"/>
+        <vip.cdms.mcoreui.preference.DropdownPreference
+            app:key="language"
+            app:title="@string/fragment_setting_language_title"
+            app:summary="@string/fragment_setting_language_summary"
+            app:entries="@array/language_entries"
+            app:entryValues="@array/language_values"
+            app:defaultValue="en"/>
+        <vip.cdms.mcoreui.preference.SwitchPreference
+            app:key="chat_floating_window"
+            app:title="@string/fragment_setting_chat_floating_window_title"
+            app:summary="@string/fragment_setting_chat_floating_window_summary"
+            app:defaultValue="true"/>
+    </vip.cdms.mcoreui.preference.PreferenceCategory>
+
+    <vip.cdms.mcoreui.preference.PreferenceCategory app:title="@string/fragment_setting_bedrock_edition_settings">
+        <vip.cdms.mcoreui.preference.Preference
+            app:key="set_up_bedrock_resource_pack"
+            app:title="@string/fragment_setting_set_up_bedrock_resource_pack_title"
+            app:summary="@string/fragment_setting_set_up_bedrock_resource_pack_summary" />
+    </vip.cdms.mcoreui.preference.PreferenceCategory>
+
+<!--    <vip.cdms.mcoreui.preference.PreferenceCategory app:title="Java Edition Settings">-->
+<!--        <vip.cdms.mcoreui.preference.Preference-->
+<!--            app:title="..."-->
+<!--            app:summary="..."/>-->
+<!--    </vip.cdms.mcoreui.preference.PreferenceCategory>-->
+
+<!--    <vip.cdms.mcoreui.preference.PreferenceCategory app:title="Developer">-->
+<!--        <vip.cdms.mcoreui.preference.Preference-->
+<!--            app:key="logcat"-->
+<!--            app:title="Logcat" />-->
+<!--    </vip.cdms.mcoreui.preference.PreferenceCategory>-->
+
+    <vip.cdms.mcoreui.preference.PreferenceCategory app:title="@string/fragment_setting_about">
+        <vip.cdms.mcoreui.preference.Preference
+            app:key="about"
+            app:title="@string/app_name"
+            app:summary="..." />
+        <vip.cdms.mcoreui.preference.Preference
+            app:key="github"
+            app:title="Github"
+            app:summary="https://github.com/Cdm2883/MineChat">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="https://github.com/Cdm2883/MineChat" />
+        </vip.cdms.mcoreui.preference.Preference>
+    </vip.cdms.mcoreui.preference.PreferenceCategory>
+
+</PreferenceScreen>

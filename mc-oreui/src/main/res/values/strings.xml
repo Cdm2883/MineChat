@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="button_icon_pressed_background">#19000000</drawable>
+<!--    <drawable name="button_icon_enabled_background">#0f0</drawable>-->
+    <drawable name="button_icon_hovered_background">#19ffffff</drawable>
+    <string name="form_custom_submit">Submit</string>
+</resources>

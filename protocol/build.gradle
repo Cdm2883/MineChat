@@ -1,0 +1,94 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    namespace 'vip.cdms.minechat.protocol'
+    compileSdk 34
+
+    defaultConfig {
+        minSdk 27
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+        externalNativeBuild {
+            ndk {
+                abiFilters 'arm64-v8a'
+            }
+            cmake {
+                cppFlags ""
+                arguments "-DANDROID_STL=c++_shared"
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+            version "3.22.1"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+//    packagingOptions { 这东西居然不能在这里设置
+//        exclude 'META-INF/INDEX.LIST'
+//        exclude 'META-INF/io.netty.versions.properties'
+//        exclude '**/*.so'
+//    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.preference:preference:1.2.0'
+    implementation "com.squareup.okhttp3:okhttp:$rootProject.ext.dependenciesVersion.okHttp"
+    implementation "com.github.bumptech.glide:glide:$rootProject.ext.dependenciesVersion.glide"
+    implementation "com.google.code.gson:gson:$rootProject.ext.dependenciesVersion.gson"
+    implementation project(path: ':mc-oreui')
+
+    implementation ('org.cloudburstmc.protocol:bedrock-connection:3.0.0.Beta1-SNAPSHOT') {
+        exclude group: 'io.netty'
+
+        exclude group: 'org.cloudburstmc.fastutil', module: 'core'
+        exclude group: 'com.nukkitx.fastutil', module: 'fastutil-common'
+
+        exclude group: 'org.cloudburstmc.fastutil.maps', module: 'int-object-maps'
+        exclude group: 'com.nukkitx.fastutil', module: 'fastutil-int-object-maps'
+
+        exclude group: 'org.cloudburstmc.fastutil.commons', module: 'int-common'
+        exclude group: 'com.nukkitx.fastutil', module: 'fastutil-int-common'
+
+        exclude group: 'org.cloudburstmc.fastutil.sets', module: 'int-sets'
+        exclude group: 'com.nukkitx.fastutil', module: 'fastutil-int-sets'
+
+        exclude group: 'org.cloudburstmc.fastutil.maps', module: 'object-int-maps'
+        exclude group: 'com.nukkitx.fastutil', module: 'fastutil-object-int-maps'
+
+        exclude group: 'org.cloudburstmc.fastutil.commons', module: 'object-common'
+        exclude group: 'com.nukkitx.fastutil', module: 'fastutil-object-common'
+
+        exclude group: 'org.cloudburstmc.fastutil.sets', module: 'object-sets'
+        exclude group: 'com.nukkitx.fastutil', module: 'fastutil-object-sets'
+    }
+
+    implementation ('com.github.steveice10:mcprotocollib:1.20.2-1') {
+        exclude group: 'io.netty'
+        exclude group: 'io.netty.incubator'
+        exclude group: 'org.cloudburstmc.math', module: 'api'
+//        exclude group: 'org.cloudburstmc.math', module: 'immutable'
+    }
+
+    implementation 'io.netty:netty-all:4.1.66.Final'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

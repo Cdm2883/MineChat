@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MineChat</string>
+
+    <!--  Activity Main  -->
+    <string name="activity_main_drawer_servers">服务器</string>
+    <string name="activity_main_drawer_plugins">插件</string>
+    <string name="activity_main_drawer_scripts">脚本</string>
+    <string name="activity_main_drawer_accounts">账户</string>
+    <string name="activity_main_drawer_settings">设置</string>
+    <string name="activity_main_error_load_plugins_title">加载插件失败</string>
+    <string name="activity_main_error_load_plugins_ioexception">%s\n\n出现此错误的原因可能是:\n1. 概率性触发, 重启软件即可\n2. 插件目录下有(子)文件夹或有除插件本体以外的文件</string>
+    <string name="activity_main_permissions_request_dialog_title">权限申请</string>
+    <string name="activity_main_permissions_request_dialog_content">请提供运行必要的权限, 否则应用将无法正常使用!</string>
+    <string name="activity_main_permissions_request_dialog_ok">好的</string>
+    <string name="activity_main_permissions_request_dialog_cancel">退出</string>
+
+    <!--  Fragment Server  -->
+    <string name="fragment_server_empty">你还没有添加服务器, 快点击下方按钮添加一个吧~</string>
+    <string name="fragment_server_add">添加服务器</string>
+    <string name="fragment_server_add_dialog_content">请选择一个协议提供器</string>
+    <string name="fragment_server_info_dialog_title">服务器信息</string>
+    <string name="fragment_server_info_dialog_content">内部ID: %s</string>
+    <string name="fragment_server_info_dialog_protocol">查看协议提供器</string>
+    <string name="fragment_server_info_dialog_clear_hist">清空聊天记录</string>
+    <string name="fragment_server_delete_dialog_title">真的要删除吗?</string>
+    <string name="fragment_server_delete_dialog_content">你将要删除: %s. 它会消失很久!</string>
+    <string name="fragment_server_delete_dialog_no">点错了</string>
+    <string name="fragment_server_delete_dialog_yes">心意已决</string>
+
+    <!--  Fragment Plugin  -->
+    <string name="fragment_plugin_protocol">协议提供</string>
+    <string name="fragment_plugin_extension">协议扩展</string>
+    <string name="fragment_plugin_service">软件服务</string>
+    <string name="fragment_plugin_priority_dialog_title">设置优先级</string>
+    <string name="fragment_plugin_priority_dialog_content">优先级</string>
+
+    <!--  Fragment Script  -->
+
+    <!--  Fragment Account  -->
+    <string name="fragment_account_empty">你还没有添加账户, 快点击下方按钮添加一个吧~</string>
+    <string name="fragment_account_default">[默认]</string>
+    <string name="fragment_account_add">添加账户</string>
+    <string name="fragment_account_add_dialog_title">标题</string>
+    <string name="fragment_account_add_dialog_username">用户名</string>
+    <string name="fragment_account_add_dialog_offline">离线账户</string>
+    <string name="fragment_account_edit_dialog_set_default">设置为默认</string>
+    <string name="fragment_account_delete_dialog_title">真的要删除吗?</string>
+    <string name="fragment_account_delete_dialog_content">你将要删除: %s. 它会消失很久!</string>
+    <string name="fragment_account_delete_dialog_no">点错了</string>
+    <string name="fragment_account_delete_dialog_yes">心意已决</string>
+
+    <!--  Fragment Setting  -->
+    <string name="fragment_setting_basic_settings">基本设置</string>
+    <string name="fragment_setting_check_for_updates_automatically_title">自动检查更新</string>
+    <string name="fragment_setting_check_for_updates_automatically_summary">在应用程序启动时检查 GitHub release 是否有更新</string>
+    <string name="fragment_setting_language_title">语言</string>
+    <string name="fragment_setting_language_summary">要支持太多语言会比较麻烦 XP</string>
+    <string name="fragment_setting_chat_floating_window_title">聊天悬浮窗</string>
+    <string name="fragment_setting_chat_floating_window_summary">服务器已连接时，软件进入后台运行将会展示一个聊天悬浮窗</string>
+    <string name="fragment_setting_bedrock_edition_settings">基岩版设置</string>
+    <string name="fragment_setting_set_up_bedrock_resource_pack_title">配置资源包</string>
+    <string name="fragment_setting_set_up_bedrock_resource_pack_summary">用于获取最佳体验</string>
+    <string name="fragment_setting_set_up_bedrock_resource_pack_dialog_title">配置资源包</string>
+    <string name="fragment_setting_set_up_bedrock_resource_pack_dialog_content">你需要配置资源包以获取对基岩版功能的完整支持.\n\n你可以手动将资源包放在\n%s ,\n\n或者单击下方按钮, 这将从您手机中的《Minecraft》程序提取资源包并配置. (需要您手机有安装《Minecraft》程序)</string>
+    <string name="fragment_setting_set_up_bedrock_resource_pack_dialog_action">提取资源包</string>
+
+    <string name="fragment_setting_about">关于软件</string>
+
+    <!--  Activity Chat  -->
+    <string name="activity_chat_connect">连接</string>
+    <string name="activity_chat_exit">断开并退出</string>
+    <string name="activity_chat_setting_title">会话设置</string>
+    <string name="activity_chat_setting_message_size">消息文字大小</string>
+    <string name="activity_chat_setting_auto_reconnect">自动重连</string>
+    <string name="activity_chat_close_dialog_title">会话关闭</string>
+    <string name="activity_chat_close_dialog_action">回到主页</string>
+    <string name="activity_chat_error_dialog_title">会话因错误而关闭</string>
+    <string name="activity_chat_error_dialog_back">回到主页</string>
+    <string name="activity_chat_error_dialog_stack">查看调用栈</string>
+    <string name="activity_chat_history_load">正在加载聊天记录</string>
+    <string name="activity_chat_history_loaded">聊天记录加载完成</string>
+
+</resources>
